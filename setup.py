@@ -2,7 +2,7 @@
 from setuptools import setup
 
 packages = \
-['xchk_docker_content', 'xchk_docker_content.migrations']
+['xchk_docker_content']
 
 package_data = \
 {'': ['*'],
