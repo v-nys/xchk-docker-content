@@ -4,5 +4,4 @@ from .contentviews import *
 
 course = Course('docker',
                 'Docker',
-                [(WhatIsDockerView,[])],
-                "git@github.com:v-nys/docker-modeloplossingen.git")
+                [(WhatIsDockerView,[])])
