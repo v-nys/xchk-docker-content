@@ -4,7 +4,7 @@ from .contentviews import *
 
 course = Course('docker',
                 'Docker',
-                [(DockerRunIntroView,[DockerInstallationView]),
+                [(DockerRunIntroView,[DockerDesktopInstallationView]),
                  (DockerDesktopInstallationView,[WhatIsDockerView]),
                  (ContainersVSVMsView,[WhatIsDockerView]),
                  (WhatIsDockerView,[WhatAreApplicationContainersView]),
