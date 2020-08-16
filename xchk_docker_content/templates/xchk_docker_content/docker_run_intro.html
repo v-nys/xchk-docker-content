@@ -1,0 +1,12 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<h3>Schriftelijk materiaal</h3>
+<p>De snelste manier om van start te gaan met Docker is </p>
+{% endblock %}
+
+{% block assignment %}
+<code>docker run hello-world</code>
+<code>docker run -dit --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4</code><!--dit vervangt hele installatie-->
+{% endblock %}

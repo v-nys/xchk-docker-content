@@ -1,0 +1,26 @@
+{% extends 'checkerapp/course_content.html' %}
+{% load xchk_instructions %}
+{% load static %}
+{% block course_content %}
+<h3>Schriftelijk materiaal</h3>
+<!--
+te behandelen:
+- ideale situatie = geen interferentie tussen applicaties
+- onbetaalbaar en onpraktisch
+- één oplossing: VM's, waarbij hardware gevirtualiseerd wordt (zie aparte knoop) (oververeenvoudigd: één sterke processor kan behandeld worden als bv. twee of meer zwakke processoren)
+- tweede oplossing: containers
+- allemaal zelfde besturingssysteem (of, technischer, zelfde kernel), maar laagjes daarboven verschillen
+- besturingssysteem is "grote" laag, dus containers zijn beperkt
+- tekening
+-->
+<p>Zelfs als je (nog) geen IT-professional bent, ben je waarschijnlijk al conflicten tussen applicaties tegengekomen. Je hebt bijvoorbeeld een stukje software <code>A</code> geïnstalleerd en deze software werkte perfect tot je andere software <code>B</code> installeerde. Dat kan bijvoorbeeld zijn omdat <code>A</code> en <code>B</code> dezelfde systeemresources gebruiken. Voor de gewone consument is dit vaak gewoon vervelend. Voor professionele gebruikers, bijvoorbeeld softwarebedrijven, is dit gevaarlijk en duur.</p>
+<p>Een simpele, maar onrealistische oplossing: installeer <code>A</code> op één machine en installeer <code>B</code> op een andere machine. Dan kan er geen conflict meer zijn. In de praktijk is dit natuurlijk onbetaalbaar. Bovendien moeten al deze machines onderhouden worden.</p>
+<p>Een flexibelere oplossing bestaat erin virtuele machines te gebruiken. Hierbij installeer je een of meerdere <em>gast</em>besturingssystemen <em>binnenin</em> je gewone <em>host</em>besturingssysteem. Voor elke gast wordt er een stukje capaciteit van je systeem gereserveerd. Anders gezegd, als je een sterke processor hebt, kan je bijvoorbeeld meerdere gastsystemen installeren die werken alsof ze toegang hebben tot een middelmatige processor. Op die manier heb je meerdere <em>virtuele</em> machines, terwijl je maar één fysieke machine hebt.</p>
+<!--TODO figuur en uitleg laagjes-->
+<p>Een tweede oplossing bestaat erin containers te gebruiken. Containers bevatten geen eigen besturingssysteem. Dit levert bepaalde voor- en nadelen ten opzichte van virtuele machines. Het belangrijkste voordeel is dat ze veel "lichter" zijn. Een besturingssysteem is een enorm stuk software. Het belangrijkste nadeel is dat ze minder flexibel zijn. Als je een container uitvoert op een zuiver Linuxsysteem, kan je geen Windowsapplicaties installeren in deze container.</p>
+<p class="info">Als je al wat ervaring hebt met containers, weet je misschien dat je wel Linuxapplicaties in Docker containers kan installeren op Windows. Zonder in veel detail te gaan, is dat omdat dat geen <em>zuivere</em> Windowssystemen zijn. Er zijn bepaalde aanpassingen gedaan om dit mogelijk te maken.</p>
+<!--TODO figuur-->
+{% endblock %}
+
+{% block assignment %}
+{% endblock %}
