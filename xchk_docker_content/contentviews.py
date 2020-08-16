@@ -35,8 +35,8 @@ class WhatIsDockerView(ContentView):
     uid = 'what_is_docker_1'
     template = 'xchk_docker_content/what_is_docker.html'
     title = 'Wat is Docker?'
-    strat = Strategy(refusing_check=TrueCheck(),
-                     accepting_check=Negation(TrueCheck()))
+    strat = Strategy(refusing_check=Negation(TrueCheck()),
+                     accepting_check=TrueCheck())
 
 class DockerDesktopInstallationView(ContentView):
      
