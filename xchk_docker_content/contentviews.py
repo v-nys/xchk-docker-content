@@ -27,8 +27,8 @@ class WhatAreApplicationContainersView(ContentView):
     uid = 'what_are_application_containers_1'
     template = 'xchk_docker_content/what_are_application_containers.html'
     title = 'Wat zijn applicatiecontainers?'
-    strat = Strategy(refusing_check=TrueCheck(),
-                     accepting_check=Negation(TrueCheck()))
+    strat = Strategy(refusing_check=Negation(TrueCheck()),
+                     accepting_check=TrueCheck())
 
 class WhatIsDockerView(ContentView):
      
